@@ -2,18 +2,15 @@ import * as React from 'react'
 
 type Props = {
     url: string
-    title: string
+    label: string
 }
 
 
-const LinkButton = ({ url, title }: Props) => {
+const LinkButton = ({ url, label }: Props) => {
     return (
-        <a href={url} className='rounded outline outline-2 outline-white px-8 py-8' style={{
-            // paddingLeft: 16,
-            // paddingRight: 16,
-            // paddingTop: 8,
-            // paddingBottom: 8,
-        }}>{title}</a>
+        <div className='rounded-lg transition ease-in-out bg-sky-500 hover:bg-sky-700 px-4 py-2 w-fit h-fit'>
+            <a href={url} className='font-medium text-sm'>{label}</a>
+        </div>
     );
 }
 
