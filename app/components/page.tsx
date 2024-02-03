@@ -4,26 +4,65 @@ import IconLinkButton from "@components/IconLinkButton";
 import Pill from "@components/Pill"
 import PillIcon from "@components/PillIcon"
 import ExperienceItem from "@components/ExperienceItem"
+import ProfilePicture from "@components/ProfilePicture"
+import ProjectItem from "@components/ProjectItem"
 
-import { mdiCheckboxMultipleMarkedCircleOutline } from "@mdi/js";
+import { mdiCheckboxMultipleMarkedCircleOutline, mdiMace, mdiMicrosoft } from "@mdi/js";
 
 const EXPERIENCIE = [
 	{
-		title: "Creador de Contenido − Twitch",
-		description:
-			"Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-		url: "https://twitch.tv/midudev",
+		title: "Seguridad Fisica",
+		description:[
+			"Vigilancia e inspeccion de instalaciones",
+			"Vigilancia e inspeccion de instalaciones",
+		],
 		start: "2021",
 		isCurrent: true,
 	},
 	{
-		title: "Principal Frontend Engineer  − Adevinta Spain",
-		description:
-			"Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
-		start: "Septiembre 2022",
-		end: "2025",
+		title: "Becario (Tecnologias de la Informacion)",
+		description: [
+			"Desarrollo de proyecto: Sistema de gestion VISIFLEX para departamento de Recursos Humanos.",
+			"Mantenimiento, reparacion y configuracion de equipo institucional.",
+			"Atencion a usuarios finales en el area de soporte tecnico"
+		],
+		start: "Marzo 2022",
+		end: "Septiembre 2022",
 		isCurrent: false,
 	},
+]
+
+const PROJECTS = [
+	{
+		title: "Sistema de gestion VISIFLEX",
+		description: "Solucion que provee un control y gestion en cada una de las funciones operativas utilizado en el departamento de RH",
+		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203401057384796252/Untitled.png?ex=65d0f592&is=65be8092&hm=e0793ff1fe1ba63113e9efc96bfe57bc2c16f9c876ad368a1423a104f324d2f6&",
+		features: [
+			{
+				glyph: mdiMicrosoft,
+				label: "SharePoint"
+			},
+			{
+				glyph: mdiMicrosoft,
+				label: "Power Apps"
+			},
+			{
+				glyph: mdiMicrosoft,
+				label: "Power Automate"
+			},
+		],
+	},
+	{
+		title: "Sistema de gestion VISIFLEX",
+		description: "Solucion que provee un control y gestion en cada una de las funciones operativas para el departamento de RH",
+		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203401057384796252/Untitled.png?ex=65d0f592&is=65be8092&hm=e0793ff1fe1ba63113e9efc96bfe57bc2c16f9c876ad368a1423a104f324d2f6&",
+		
+		urls: {
+			icon: "",
+			label: "",
+			url: ""
+		}
+	}
 ]
 
 export default function Page() {
@@ -31,23 +70,23 @@ export default function Page() {
 		<div className="flex flex-col min-h-screen">
 			<div>
 				<section className="grid py-24 gap-8 mx-auto lg:max-w-3xl md:max-w-2xl">
-					<article className="h-fit">
-						<h1 className="mb-2 text-xl">&lt;LinkButton /&gt;</h1>
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;LinkButton /&gt;</h1>
 						<div className="flex gap-2 ml-8">
 							<LinkButton url="#" label="Link button" />
 							<LinkButton url="#" label="Link button" />
 						</div>
 					</article>
 
-					<article className="h-fit">
-						<h1 className="mb-2 text-xl">&lt;IconLinkButton /&gt;</h1>
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;IconLinkButton /&gt;</h1>
 						<div className="flex gap-2 ml-8">
 							<IconLinkButton url="#" label="Link button" glyph={mdiCheckboxMultipleMarkedCircleOutline} />
 						</div>
 					</article>
 
-					<article className="h-fit">
-						<h1 className="mb-2 text-xl">&lt;Pill /&gt;</h1>
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;Pill /&gt;</h1>
 						<div className="flex gap-3 ml-8">
 							<Pill label="Pill 1" />
 							<Pill label="Pill 2" />
@@ -55,8 +94,8 @@ export default function Page() {
 						</div>
 					</article>
 
-					<article className="h-fit">
-						<h1 className="mb-2 text-xl">&lt;PillIcon /&gt;</h1>
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;PillIcon /&gt;</h1>
 						<div className="flex gap-3 ml-8">
 							<PillIcon label="Pill icon 1" glyph={mdiCheckboxMultipleMarkedCircleOutline} />
 							<PillIcon label="Pill icon 2" glyph={mdiCheckboxMultipleMarkedCircleOutline} />
@@ -64,11 +103,26 @@ export default function Page() {
 						</div>
 					</article>
 
-					<article className="h-fit">
-						<h1 className="mb-2 text-xl">&lt;ExperienceItem /&gt;</h1>
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;ExperienceItem /&gt;</h1>
 						<div>
 							<ExperienceItem {...EXPERIENCIE[0]} />
 							<ExperienceItem {...EXPERIENCIE[1]} />
+						</div>
+					</article>
+
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;ExperienceItem /&gt;</h1>
+						<div>
+							<ProjectItem {...PROJECTS[0]} />
+							<ProjectItem {...PROJECTS[1]} />
+						</div>
+					</article>
+					
+					<article className="h-fit flex flex-col gap-2">
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;ProfilePicture /&gt;</h1>
+						<div className="ml-8">
+							<ProfilePicture url='https://i.pinimg.com/originals/63/d2/23/63d22307f5da42cdcac7ecdb3aa69b60.jpg' />
 						</div>
 					</article>
 				</section>

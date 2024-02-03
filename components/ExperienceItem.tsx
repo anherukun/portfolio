@@ -2,7 +2,7 @@ import * as React from 'react'
 
 type Props = {
     title: string
-    description: string
+    description: string[]
     url?: string
     start: string
     end?: string
@@ -15,14 +15,19 @@ const ExperienceItem = ({ title, description, url, start, end, elapsedTime, isCu
     return (
         <div className='grid grid-cols-5 gap-10 pb-12 w-fill'>
             <div className='col-span-2'>
-                <h3 className='text-xl'>{title}</h3>
+                <h3 className='text-xl font-bold'>{title}</h3>
                 <p className='text-sm text-gray-400'>{start} - {isCurrent ? 'Actualmente...' : end }</p>
                 {elapsedTime ? (<p>{elapsedTime}</p>) : ''}
             </div>
             
-            <div className='col-span-3 flex flex-col gap-4 text-gray-400'>
-                {description}
-                {url ? (<a href={url} className='text-gray-100'>Saber mas...</a>) : ''}
+            <div className='col-span-3 flex flex-col gap-4 text-gray-500 font-normal'>
+                <ul className='list-disc'>
+                    {description.map((e, index) => (
+                        <li>{e}</li>
+                    ))}
+                </ul>
+
+                {url ? (<a href={url} className='text-cyan-700 font-medium'>Saber mas...</a>) : ''}
             </div>
         </div>
     );
