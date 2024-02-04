@@ -11,11 +11,9 @@ type Props = {
 const IconLinkButton = ({ url, label, glyph }: Props) => {
 
     return (
-        <div className='flex gap-2 items-center rounded-lg transition ease-in-out bg-sky-500 hover:bg-sky-700 px-4 py-2 w-fit h-fit'>
+        <div className='flex gap-2 items-center text-white rounded-lg transition ease-in-out bg-sky-500 hover:bg-sky-700 px-4 py-2 w-fit h-fit'>
             <Icon path={glyph} size={1}/>
-            <a href={url} className='font-medium text-sm'>{label}</a>
-
-            
+            <a href={url} className='font-medium text-sm' target='blank'>{label}</a>
         </div>
     );
 }

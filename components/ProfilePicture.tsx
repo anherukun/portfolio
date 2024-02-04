@@ -7,7 +7,7 @@ type Props = {
 const PictureProfile = ({url}: Props) => {
     return (
         <div className=''>
-            <img src={url} alt="It's me" className='h-[100px] h-[100px] aspect-square object-cover rounded-xl' />
+            <img src={url} alt="It's me" className='h-[128px] h-[128px] aspect-square object-cover rounded-xl' />
         </div>
     );
 }

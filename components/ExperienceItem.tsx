@@ -15,7 +15,7 @@ const ExperienceItem = ({ title, description, url, start, end, elapsedTime, isCu
     return (
         <div className='grid grid-cols-5 gap-10 pb-12 w-fill'>
             <div className='col-span-2'>
-                <h3 className='text-xl font-bold'>{title}</h3>
+                <h3 className='text-xl font-semibold'>{title}</h3>
                 <p className='text-sm text-gray-400'>{start} - {isCurrent ? 'Actualmente...' : end }</p>
                 {elapsedTime ? (<p>{elapsedTime}</p>) : ''}
             </div>

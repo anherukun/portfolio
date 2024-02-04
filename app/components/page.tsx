@@ -7,13 +7,12 @@ import ExperienceItem from "@components/ExperienceItem"
 import ProfilePicture from "@components/ProfilePicture"
 import ProjectItem from "@components/ProjectItem"
 
-import { mdiCheckboxMultipleMarkedCircleOutline, mdiMace, mdiMicrosoft } from "@mdi/js";
+import { mdiCheckboxMultipleMarkedCircleOutline, mdiLink, mdiMace, mdiMicrosoft } from "@mdi/js";
 
 const EXPERIENCIE = [
 	{
 		title: "Seguridad Fisica",
 		description:[
-			"Vigilancia e inspeccion de instalaciones",
 			"Vigilancia e inspeccion de instalaciones",
 		],
 		start: "2021",
@@ -29,7 +28,7 @@ const EXPERIENCIE = [
 		start: "Marzo 2022",
 		end: "Septiembre 2022",
 		isCurrent: false,
-	},
+	}
 ]
 
 const PROJECTS = [
@@ -58,9 +57,9 @@ const PROJECTS = [
 		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203401057384796252/Untitled.png?ex=65d0f592&is=65be8092&hm=e0793ff1fe1ba63113e9efc96bfe57bc2c16f9c876ad368a1423a104f324d2f6&",
 		
 		urls: {
-			icon: "",
-			label: "",
-			url: ""
+			icon: mdiLink,
+			label: "Ver mas",
+			url: "http://google.com"
 		}
 	}
 ]
@@ -69,7 +68,7 @@ export default function Page() {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<div>
-				<section className="grid py-24 gap-8 mx-auto lg:max-w-3xl md:max-w-2xl">
+				<section className="grid py-24 gap-8 mx-auto 	">
 					<article className="h-fit flex flex-col gap-2">
 						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;LinkButton /&gt;</h1>
 						<div className="flex gap-2 ml-8">
@@ -112,7 +111,7 @@ export default function Page() {
 					</article>
 
 					<article className="h-fit flex flex-col gap-2">
-						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;ExperienceItem /&gt;</h1>
+						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;ProjectItem /&gt;</h1>
 						<div>
 							<ProjectItem {...PROJECTS[0]} />
 							<ProjectItem {...PROJECTS[1]} />
