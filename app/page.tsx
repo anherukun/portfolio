@@ -3,7 +3,7 @@ import ExperienceItem from "@components/ExperienceItem"
 import ProfilePicture from "@components/ProfilePicture"
 import ProjectEItem from "@components/ProjectItem"
 
-import { mdiDownload, mdiLink, mdiMicrosoft } from "@mdi/js";
+import { mdiDownload, mdiMicrosoft } from "@mdi/js";
 
 const EXPERIENCIE = [
 	{

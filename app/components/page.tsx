@@ -68,7 +68,7 @@ export default function Page() {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<div>
-				<section className="grid py-24 gap-8 mx-auto 	">
+				<section className="grid py-24 gap-8 mx-auto lg:max-w-3xl md:max-w-2xl">
 					<article className="h-fit flex flex-col gap-2">
 						<h1 className="mb-2 text-xl bg-gray-100 p-2 rounded-xl">&lt;LinkButton /&gt;</h1>
 						<div className="flex gap-2 ml-8">
