@@ -27,25 +27,27 @@ const ProjectItem = ({ title, description, imageurl, features, urls }: Props) =>
     return (
         <div className='grid grid-cols-6 gap-10 pb-12 w-fill group'>
             <div className='col-span-3'>
-                <img className='rounded-xl object-cover shadow-lg transition duration-500 ease-in-out group-hover:scale-105' loading='lazy' src={imageurl} />
+                <img className='rounded-xl object-cover shadow-lg transition duration-500 ease-in-out group-hover:scale-105' loading='lazy' alt='Preview' src={imageurl} />
             </div>
 
             <div className='col-span-3 flex flex-col gap-3 font-normal'>
                 <h3 className='text-xl font-bold'>{title}</h3>
 
-                {description}
+                <p className='text-gray-500'>
+                    {description}
+                </p>
 
                 {features ? (
                     <div className='flex flex-row flex-wrap gap-2 text-gray-500'>
                         {features?.map((e, index) => (
-                            <PillIcon label={e.label} glyph={e.glyph} />
+                            <PillIcon label={e.label} glyph={e.glyph} key={index}/>
                         ))}
                     </div>) : ''}
 
                 {urls ? (
                     <div className='self-start flex flex-row flex-wrap gap-2 no-print'>
                         {urls?.map((e, index) => (
-                            <IconLinkButton url={e.url} label={e.label} glyph={e.icon} />
+                            <IconLinkButton url={e.url} label={e.label} glyph={e.icon} key={index}/>
                         ))}
                     </div>) : ''}
             </div>
