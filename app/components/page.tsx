@@ -13,6 +13,7 @@ import { mdiAndroid, mdiCheckboxMultipleMarkedCircleOutline, mdiCodeBraces, mdiD
 const EXPERIENCIE = [
 	{
 		title: "Seguridad Fisica",
+		company: "Petróleos Mexicanos",
 		description:[
 			"Vigilancia e inspeccion de instalaciones",
 		],
@@ -21,6 +22,7 @@ const EXPERIENCIE = [
 	},
 	{
 		title: "Becario (Tecnologias de la Informacion)",
+		company: "Petróleos Mexicanos",
 		description: [
 			"Desarrollo de proyecto: Sistema de gestion VISIFLEX para departamento de Recursos Humanos.",
 			"Mantenimiento, reparacion y configuracion de equipo institucional.",

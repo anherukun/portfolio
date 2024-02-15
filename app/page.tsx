@@ -11,11 +11,12 @@ import EducationItem from "@components/EducationItem"
 
 import Icon from '@mdi/react';
 
-import { mdiAndroid, mdiBrush, mdiCodeBlockTags, mdiCodeBraces, mdiCodeBrackets, mdiConsole, mdiCube, mdiCubeOff, mdiCubeOutline, mdiDatabase, mdiDocker, mdiEmail, mdiEmailOutline, mdiFirebase, mdiGit, mdiGithub, mdiGooglePlay, mdiLinkedin, mdiMicrosoft, mdiMicrosoftWindows, mdiMicrosoftWindowsClassic, mdiPackageVariant, mdiPrinterOutline, mdiWeb } from "@mdi/js";
+import { mdiAndroid, mdiAndroidStudio, mdiBrush, mdiCodeBlockTags, mdiCodeBraces, mdiCodeBrackets, mdiConsole, mdiCube, mdiCubeOff, mdiCubeOutline, mdiDatabase, mdiDocker, mdiEmail, mdiEmailOutline, mdiFirebase, mdiGit, mdiGithub, mdiGooglePlay, mdiLinkedin, mdiMicrosoft, mdiMicrosoftExcel, mdiMicrosoftOffice, mdiMicrosoftPowerpoint, mdiMicrosoftSharepoint, mdiMicrosoftVisualStudio, mdiMicrosoftVisualStudioCode, mdiMicrosoftWindows, mdiMicrosoftWindowsClassic, mdiMicrosoftWord, mdiPackageVariant, mdiPrinterOutline, mdiWeb } from "@mdi/js";
 
 const EXPERIENCIE = [
 	{
 		title: "Seguridad Fisica",
+		company: "Petróleos Mexicanos",
 		description: [
 			"Vigilancia e inspeccion de instalaciones",
 		],
@@ -24,17 +25,19 @@ const EXPERIENCIE = [
 	},
 	{
 		title: "Becario (Tecnologias de la Informacion)",
+		company: "Petróleos Mexicanos",
 		description: [
 			"Desarrollo de proyecto: Sistema de gestion VISIFLEX para departamento de Recursos Humanos.",
 			"Mantenimiento, reparacion y configuracion de equipo institucional.",
-			"Atencion a usuarios finales en el area de soporte tecnico"
+			"Atencion a usuarios finales en el area de soporte técnico"
 		],
 		start: "Marzo 2022",
 		end: "Septiembre 2022",
 		isCurrent: false,
 	},
 	{
-		title: "Soporte Tecnico en TI",
+		title: "Soporte Técnico en TI",
+		company: "Petróleos Mexicanos",
 		description: [
 			"Instalación y configuración de software.",
 			"Mantenimiento Correctivo a equipo de computo.",
@@ -45,7 +48,8 @@ const EXPERIENCIE = [
 		isCurrent: false,
 	},
 	{
-		title: "Soporte Tecnico en TI",
+		title: "Soporte Técnico en TI",
+		company: "Petróleos Mexicanos",
 		description: [
 			"Instalación y configuración de software.",
 			"Mantenimiento Correctivo a equipo de computo.",
@@ -79,6 +83,10 @@ const HABILITIES = [
 		habItems: [
 			{
 				label: "MySQL",
+				glyph: mdiDatabase
+			},
+			{
+				label: "Access",
 				glyph: mdiDatabase
 			},
 			{
@@ -137,6 +145,43 @@ const HABILITIES = [
 				label: "Docker",
 				glyph: mdiDocker
 			},
+			{
+				label: "Visual Studio",
+				glyph: mdiMicrosoftVisualStudio
+			},
+			{
+				label: "Visual Studio Code",
+				glyph: mdiMicrosoftVisualStudioCode
+			},
+			{
+				label: "Android Studio",
+				glyph: mdiAndroid
+			},
+		]
+	},
+	{
+		title: 'Ofimatica',
+		habItems: [
+			{
+				label: "MS Office 365",
+				glyph: mdiMicrosoftOffice
+			},
+			{
+				label: "MS Word",
+				glyph: mdiMicrosoftWord
+			},
+			{
+				label: "MS Excel",
+				glyph: mdiMicrosoftExcel
+			},
+			{
+				label: "MS PowerPoint",
+				glyph: mdiMicrosoftPowerpoint
+			},
+			{
+				label: "MS SharePoint",
+				glyph: mdiMicrosoftSharepoint
+			}
 		]
 	},
 	{
@@ -160,8 +205,6 @@ const HABILITIES = [
 			},
 		]
 	},
-
-	
 ]
 
 const PROJECTS = [
@@ -292,7 +335,7 @@ export default function Home() {
 				<div className="grid grid-cols-3">
 					<div className="flex flex-col gap-1 col-span-2">
 						<h1 className="text-3xl font-semibold">Angel Gerardo Jimenez Reyes</h1>
-						<h2 className="font-medium">Ingeniero de Tecnologias de Informacion y Comunicacion</h2>
+						<h2 className="font-medium">Ingeniero de Tecnologias de Información y Comunicación</h2>
 						<div className="flex flex-row gap-1 text-gray-500 items-center">
 							<Icon path={mdiWeb} size={0.75} />
 							<p className="text-gray-500 text-md inline">Tuxpan, Ver. MX</p>
@@ -322,7 +365,7 @@ export default function Home() {
 				<div className="flex flex-col gap-2">
 					<h2 className="text-xl font-bold">Sobre mi</h2>
 					<p className="text-pretty text-gray-500">
-						+3 años de experiencia en Soporte Tecnico Informatico en Petroleos Mexicanos. Continuamente impulso mis conocimientos sobre la informatica
+						+3 años de experiencia en Soporte Tecnico Informático en Petróleos Mexicanos. Continuamente impulso mis conocimientos sobre la informática
 						de manera autodidacta aprendiendo tecnologias mas actuales en la industria del desarrollo de software.
 					</p>
 					<p className="text-pretty text-gray-500">
@@ -334,7 +377,7 @@ export default function Home() {
 					<h2 className="text-xl font-bold">Experiencia laboral</h2>
 					{EXPERIENCIE ? (
 						EXPERIENCIE.map((e, index) => (
-							<ExperienceItem {...e} />
+							<ExperienceItem {...e} key={index}/>
 						))) : ''}
 				</div>
 
@@ -342,7 +385,7 @@ export default function Home() {
 					<h2 className="text-xl font-bold">Educacion</h2>
 					{EDUCATION ? (
 						EDUCATION.map((e, index) => (
-							<EducationItem {...e} />
+							<EducationItem {...e} key={index}/>
 						))) : ''}
 				</div>
 
@@ -351,7 +394,7 @@ export default function Home() {
 					<div className="flex flex-col gap-2 flex-wrap">
 						{HABILITIES ? (
 							HABILITIES.map((e, index) => (
-								<HabilitiesItem {...e} />
+								<HabilitiesItem {...e} key={index}/>
 							))) : ''}
 					</div>
 				</div>
@@ -360,7 +403,7 @@ export default function Home() {
 					<h2 className="text-xl font-bold">Proyectos</h2>
 					{PROJECTS ? (
 						PROJECTS.map((e, index) => (
-							<ProjectEItem {...e} />
+							<ProjectEItem {...e} key={index}/>
 						))) : ''}
 				</div>
 			</div>

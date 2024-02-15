@@ -21,7 +21,7 @@ const HabilitiesItem = ({ title, habItems }: Props) => {
             <div className="flex flex-row gap-2 flex-wrap">
                 {habItems ? (
                     habItems.map((e, index) => (
-                        <MediumPillIcon label={e.label} glyph={e.glyph} />
+                        <MediumPillIcon label={e.label} glyph={e.glyph} key={index}/>
                     ))) : ''}
             </div>
         </div>
