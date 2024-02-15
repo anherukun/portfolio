@@ -8,11 +8,13 @@ type Props = {
     description: string
     imageurl: string
     features?: featuresProps[]
-    urls?: {
-        icon: string
-        label: string
-        url: string
-    }
+    urls?: urlProps[]
+}
+
+type urlProps = {
+    icon: string
+    label: string
+    url: string
 }
 
 type featuresProps = {
@@ -41,8 +43,10 @@ const ProjectItem = ({ title, description, imageurl, features, urls }: Props) =>
                     </div>) : ''}
 
                 {urls ? (
-                    <div className='self-start'>
-                        <IconLinkButton url={urls.url} label={urls.label} glyph={urls.icon} />
+                    <div className='self-start flex flex-row flex-wrap gap-2 no-print'>
+                        {urls?.map((e, index) => (
+                            <IconLinkButton url={e.url} label={e.label} glyph={e.icon} />
+                        ))}
                     </div>) : ''}
             </div>
         </div>
