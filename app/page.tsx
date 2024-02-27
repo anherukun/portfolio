@@ -3,6 +3,7 @@
 import MinimalLinkButton from "@/components/MinimalLinkButton"
 import MinimalButton from "@/components/MinimalButton"
 import MediumPillIcon from "@/components/MediumPillIcon"
+import LanguageItem from "@/components/LanguageItem"
 import HabilitiesItem from "@/components/HabilitiesItem"
 import ExperienceItem from "@components/ExperienceItem"
 import ProfilePicture from "@components/ProfilePicture"
@@ -11,7 +12,7 @@ import EducationItem from "@components/EducationItem"
 
 import Icon from '@mdi/react';
 
-import { mdiAndroid, mdiAndroidStudio, mdiBrush, mdiCodeBlockTags, mdiCodeBraces, mdiCodeBrackets, mdiConsole, mdiCube, mdiCubeOff, mdiCubeOutline, mdiDatabase, mdiDocker, mdiEmail, mdiEmailOutline, mdiFirebase, mdiGit, mdiGithub, mdiGooglePlay, mdiLinkedin, mdiMicrosoft, mdiMicrosoftExcel, mdiMicrosoftOffice, mdiMicrosoftPowerpoint, mdiMicrosoftSharepoint, mdiMicrosoftVisualStudio, mdiMicrosoftVisualStudioCode, mdiMicrosoftWindows, mdiMicrosoftWindowsClassic, mdiMicrosoftWord, mdiPackageVariant, mdiPrinterOutline, mdiWeb } from "@mdi/js";
+import { mdiAndroid, mdiAndroidStudio, mdiBrush, mdiCodeBlockTags, mdiCodeBraces, mdiCodeBrackets, mdiConsole, mdiCube, mdiCubeOff, mdiCubeOutline, mdiDatabase, mdiDocker, mdiEmail, mdiEmailOutline, mdiFirebase, mdiGit, mdiGithub, mdiGooglePlay, mdiLinkedin, mdiMicrosoft, mdiMicrosoftExcel, mdiMicrosoftOffice, mdiMicrosoftPowerpoint, mdiMicrosoftSharepoint, mdiMicrosoftVisualStudio, mdiMicrosoftVisualStudioCode, mdiMicrosoftWindows, mdiMicrosoftWindowsClassic, mdiMicrosoftWord, mdiPackageVariant, mdiPrinterOutline, mdiTranslate, mdiWeb } from "@mdi/js";
 
 const EXPERIENCIE = [
 	{
@@ -328,6 +329,17 @@ const PROJECTS = [
 	}
 ]
 
+const LANGUAGES = [
+	{
+		title: "Español",
+		level: "Nativo",
+	},
+	{
+		title: "Ingles",
+		level: "Intermedio",
+	}
+]
+
 export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between p-16">
@@ -377,7 +389,7 @@ export default function Home() {
 					<h2 className="text-xl font-bold">Experiencia laboral</h2>
 					{EXPERIENCIE ? (
 						EXPERIENCIE.map((e, index) => (
-							<ExperienceItem {...e} key={index}/>
+							<ExperienceItem {...e} key={index} />
 						))) : ''}
 				</div>
 
@@ -385,7 +397,7 @@ export default function Home() {
 					<h2 className="text-xl font-bold">Educacion</h2>
 					{EDUCATION ? (
 						EDUCATION.map((e, index) => (
-							<EducationItem {...e} key={index}/>
+							<EducationItem {...e} key={index} />
 						))) : ''}
 				</div>
 
@@ -394,7 +406,7 @@ export default function Home() {
 					<div className="flex flex-col gap-2 flex-wrap">
 						{HABILITIES ? (
 							HABILITIES.map((e, index) => (
-								<HabilitiesItem {...e} key={index}/>
+								<HabilitiesItem {...e} key={index} />
 							))) : ''}
 					</div>
 				</div>
@@ -403,8 +415,18 @@ export default function Home() {
 					<h2 className="text-xl font-bold">Proyectos</h2>
 					{PROJECTS ? (
 						PROJECTS.map((e, index) => (
-							<ProjectEItem {...e} key={index}/>
+							<ProjectEItem {...e} key={index} />
 						))) : ''}
+				</div>
+
+				<div className="flex flex-col gap-2">
+					<h2 className="text-xl font-bold">Idiomas</h2>
+					<div className="flex flex-row gap-2 flex-wrap">
+						{LANGUAGES ? (
+							LANGUAGES.map((e, index) => (
+								<LanguageItem {...e} key={index} />
+							))) : ''}
+					</div>
 				</div>
 			</div>
 		</main>
