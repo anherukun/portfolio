@@ -18,12 +18,10 @@
 */
 @media print{
 	@page {
-		
 		margin-top: 0.32in !important;
 		margin-bottom: 0.32in !important;
 		margin-left: 0 !important;
 		margin-right: 0 !important;
-
 	}
 
 	.no-print {

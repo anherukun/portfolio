@@ -12,7 +12,7 @@ import EducationItem from "@components/EducationItem"
 
 import Icon from '@mdi/react';
 
-import { mdiAndroid, mdiAndroidStudio, mdiBrush, mdiCodeBlockTags, mdiCodeBraces, mdiCodeBrackets, mdiConsole, mdiCube, mdiCubeOff, mdiCubeOutline, mdiDatabase, mdiDocker, mdiEmail, mdiEmailOutline, mdiFirebase, mdiGit, mdiGithub, mdiGooglePlay, mdiLinkedin, mdiMicrosoft, mdiMicrosoftExcel, mdiMicrosoftOffice, mdiMicrosoftPowerpoint, mdiMicrosoftSharepoint, mdiMicrosoftVisualStudio, mdiMicrosoftVisualStudioCode, mdiMicrosoftWindows, mdiMicrosoftWindowsClassic, mdiMicrosoftWord, mdiPackageVariant, mdiPrinterOutline, mdiTranslate, mdiWeb } from "@mdi/js";
+import { mdiAndroid, mdiBrush, mdiCodeBlockTags, mdiCodeBraces, mdiConsole, mdiCubeOutline, mdiDatabase, mdiDocker, mdiEmailOutline, mdiFirebase, mdiGit, mdiGithub, mdiGooglePlay, mdiLinkedin, mdiMicrosoft, mdiMicrosoftExcel, mdiMicrosoftOffice, mdiMicrosoftPowerpoint, mdiMicrosoftSharepoint, mdiMicrosoftVisualStudio, mdiMicrosoftVisualStudioCode, mdiMicrosoftWindows, mdiMicrosoftWindowsClassic, mdiMicrosoftWord, mdiPackageVariant, mdiPrinterOutline, mdiWeb } from "@mdi/js";
 
 const EXPERIENCIE = [
 	{
@@ -212,7 +212,7 @@ const PROJECTS = [
 	{
 		title: "Sistema de gestion VISIFLEX",
 		description: "Solucion que provee un control y gestion en cada una de las funciones operativas para el departamento de RH",
-		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203401057384796252/Untitled.png?ex=65d0f592&is=65be8092&hm=e0793ff1fe1ba63113e9efc96bfe57bc2c16f9c876ad368a1423a104f324d2f6&",
+		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203401057384796252/Untitled.png?ex=6622b292&is=66216112&hm=710300313ad978e6b30027fbc4028216ea685b6423677c9c9746960745944033&",
 		features: [
 			{
 				glyph: mdiMicrosoft,
@@ -231,7 +231,7 @@ const PROJECTS = [
 	{
 		title: "Aplicacion movil buscador de gasolineras: Mi Gasolinera",
 		description: "Aplicación de productividad y economía diseñada para facilitar la búsqueda de gasolineras en México y ayudar a los usuarios a ahorrar tiempo y dinero a la hora de comprar combustible",
-		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203811416960667719/Untitled-2.png?ex=65d273bf&is=65bffebf&hm=90b456ed8c07c683581ce5f83e05d1cd0fd2f7147607bb2fe2d01268b6e40cc0&",
+		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1203811416960667719/Untitled-2.png?ex=662ebcbf&is=661c47bf&hm=c213be2c3259af8cd2cc8297f49da0a7e7f0fdf1782d06936b5376292c82c303&",
 		features: [
 			{
 				glyph: mdiFirebase,
@@ -261,7 +261,7 @@ const PROJECTS = [
 	{
 		title: "Sistema interno: Checador de asistencia",
 		description: "Aplicacion web de chequeo de asistencia para su habilitacion en el departamento de TI como quiosco interactivo",
-		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1207393393928577024/chechador.png?ex=65df7bb9&is=65cd06b9&hm=de37508e63f7bca2801bc5dafe5f35c7b7b6bcb37045936ceeeec97823f1af86&",
+		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1207393393928577024/chechador.png?ex=66328a39&is=66201539&hm=29201cb838ed2778a3bdbbeebc8bfeed8e3da4f682875a568566304c277b5d58&",
 		features: [
 			{
 				glyph: mdiCodeBraces,
@@ -295,7 +295,7 @@ const PROJECTS = [
 	{
 		title: "Aplicacion movil: Smart Control BT",
 		description: "Aplicacion para la utilizacion de dispositivos embebidos basados en arduino utilizando el estandar de comunicacion de Bluetooth",
-		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1207400448898764892/smartcontrol-bt.png?ex=65df824b&is=65cd0d4b&hm=f601375ada4d219f47be4f8f6b85a02cdeb68f718982579f8d53ddffd4489e38&",
+		imageurl: "https://cdn.discordapp.com/attachments/1103444305055580311/1207400448898764892/smartcontrol-bt.png?ex=663290cb&is=66201bcb&hm=04bd46002d71dc0337d4c75e3656359b6a919be2e76fa658425078957119c90a&",
 		features: [
 			{
 				glyph: mdiCodeBraces,
